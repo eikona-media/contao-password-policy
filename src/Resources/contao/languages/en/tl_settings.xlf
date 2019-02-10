@@ -1,0 +1,105 @@
+<?xml version="1.0" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file datatype="php" original="src/Resources/contao/languages/en/tl_settings.xlf" source-language="en"
+          target-language="en">
+        <body>
+            <trans-unit id="tl_settings.eimed_pw_policy_settings_header">
+                <source>Password Policies</source>
+                <target>Password Policies</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_min_length.0">
+                <source>Minimum Length</source>
+                <target>Minimum Length</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_min_length.1">
+                <source>Please enter number</source>
+                <target>Please enter number</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_max_length.0">
+                <source>Maximum Length</source>
+                <target>Maximum Length</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_max_length.1">
+                <source>Please enter number</source>
+                <target>Please enter number</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_upper_case.0">
+                <source>Uppercase Characters</source>
+                <target>Uppercase Characters</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_upper_case.1">
+                <source>Please enter number - 0 or empty means no uppercase characters</source>
+                <target>Please enter number - 0 or empty means no uppercase characters</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_lower_case.0">
+                <source>Lowercase Characters</source>
+                <target>Lowercase Characters</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_lower_case.1">
+                <source>Please enter number - 0 or empty to use no lowercase characters</source>
+                <target>Please enter number - 0 or empty to use no lowercase characters</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_special_chars.0">
+                <source>Special Characters</source>
+                <target>Special Characters</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_special_chars.1">
+                <source>Please enter number - 0 or empty to use no special characters</source>
+                <target>Please enter number - 0 or empty to use no special characters</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_digits.0">
+                <source>Digits</source>
+                <target>Digits</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_digits.1">
+                <source>Please enter number - 0 or empty to use no digits</source>
+                <target>Please enter number - 0 or empty to use no digits</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_active_scope_user.0">
+                <source>Active for Users</source>
+                <target>Activate for Users</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_active_scope_user.1">
+                <source>Activates policy checks for users</source>
+                <target>Activates policy checks for users</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_active_scope_member.0">
+                <source>Active for members</source>
+                <target>Activate for members</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_active_scope_member.1">
+                <source>Activates policy checks for members</source>
+                <target>Activates policy checks for members</target>
+            </trans-unit>
+
+            <trans-unit id="tl_settings.eimed_pw_policy_missmatch_message">
+                <source>The password should</source>
+                <target>The password should</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_min_length_message">
+                <source>be at least %s characters long</source>
+                <target>be at least %s characters long</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_max_length_message">
+                <source>be at maximum %s characters long</source>
+                <target>be at maximum %s characters long</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_upper_case_message">
+                <source>have at least %s upper-case character(s)</source>
+                <target>have at least %s upper-case character(s)</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_lower_case_message">
+                <source>have at least %s lower-case character(s)</source>
+                <target>have at least %s lower-case character(s)</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_special_chars_message">
+                <source>have at least %s special character(s)</source>
+                <target>have at least %s special character(s)</target>
+            </trans-unit>
+            <trans-unit id="tl_settings.eimed_pw_digits_message">
+                <source>have at least %s digit(s)</source>
+                <target>have at least %s digit(s)</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

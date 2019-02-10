@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file datatype="php" original="src/Resources/contao/languages/en/eimed_messages.xlf" source-language="en"
+          target-language="en">
+        <body>
+            <trans-unit id="eimed.pw_policy_missmatch_message">
+                <source>The password should</source>
+                <target>The password should</target>
+            </trans-unit>
+            <trans-unit id="eimed.pw_min_length_message">
+                <source>be at least %s characters long</source>
+                <target>be at least %s characters long</target>
+            </trans-unit>
+            <trans-unit id="eimed.pw_max_length_message">
+                <source>be maximum %s characters long</source>
+                <target>be maximum %s characters long</target>
+            </trans-unit>
+            <trans-unit id="eimed.pw_upper_case_message">
+                <source>have at least %s upper-case character(s)</source>
+                <target>have at least %s upper-case character(s)</target>
+            </trans-unit>
+            <trans-unit id="eimed.pw_lower_case_message">
+                <source>have at least %s lower-case character(s)</source>
+                <target>have at least %s lower-case character(s)</target>
+            </trans-unit>
+            <trans-unit id="eimed.pw_special_chars_message">
+                <source>have at least %s special-character(s)</source>
+                <target>have at least %s special-character(s)</target>
+            </trans-unit>
+            <trans-unit id="eimed.pw_digits_message">
+                <source>have at least %s digit(s)</source>
+                <target>have at least %s digit(s)</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

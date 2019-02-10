@@ -1,0 +1,35 @@
+{
+    "name": "eikona-media/contao-password-policy",
+    "description": "Password Policy Bundle for Contao Open Source CMS",
+    "keywords": [
+        "contao",
+        "backend",
+        "password",
+        "policy",
+        "security",
+        "custom"
+    ],
+    "type": "contao-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "eikona-media.de",
+            "homepage": "https://eikona-media.de/"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "contao/core-bundle": "^4.4"
+    },
+    "conflict": {
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "EikonaMedia\\Contao\\PasswordPolicy\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "EikonaMedia\\Contao\\PasswordPolicy\\ContaoManager\\Plugin"
+    }
+}

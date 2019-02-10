@@ -1,0 +1,10 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        #public: false
+
+    eikona_media.contao.password_policy.policy_service:
+        class: EikonaMedia\Contao\PasswordPolicy\Service\PasswordPolicyService
+        arguments:
+            - '@translator'
