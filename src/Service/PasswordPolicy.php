@@ -11,149 +11,106 @@
 namespace EikonaMedia\Contao\PasswordPolicy\Service;
 
 /**
- * Class PasswordPolicy
- * @package EikonaMedia\Contao\PasswordPolicy\Service
+ * Class PasswordPolicy.
  */
 class PasswordPolicy
 {
     /**
-     * @var int $minLength
+     * @var int
      */
     private $minLength = 0;
 
     /**
-     * @var int $maxLength
+     * @var int
      */
     private $maxLength = 0;
 
     /**
-     * @var int $upperCase
+     * @var int
      */
     private $upperCase = 0;
 
     /**
-     * @var int $lowerCase
+     * @var int
      */
     private $lowerCase = 0;
 
     /**
-     * @var int $specialChars
+     * @var int
      */
     private $specialChars = 0;
 
     /**
-     * @var int $digits
+     * @var int
      */
     private $digits = 0;
 
-    /**
-     * @return int
-     */
     public function getMinLength(): int
     {
         return $this->minLength;
     }
 
-    /**
-     * @param int $minLength
-     * @return PasswordPolicy
-     */
-    public function setMinLength(int $minLength): PasswordPolicy
+    public function setMinLength(int $minLength): self
     {
         $this->minLength = $minLength;
 
         return $this;
     }
 
-    /**
-     * @return int
-     */
     public function getMaxLength(): int
     {
         return $this->maxLength;
     }
 
-    /**
-     * @param int $maxLength
-     * @return PasswordPolicy
-     */
-    public function setMaxLength(int $maxLength): PasswordPolicy
+    public function setMaxLength(int $maxLength): self
     {
         $this->maxLength = $maxLength;
 
         return $this;
     }
 
-    /**
-     * @return int
-     */
     public function getUpperCase(): int
     {
         return $this->upperCase;
     }
 
-    /**
-     * @param int $upperCase
-     * @return PasswordPolicy
-     */
-    public function setUpperCase(int $upperCase): PasswordPolicy
+    public function setUpperCase(int $upperCase): self
     {
         $this->upperCase = $upperCase;
 
         return $this;
     }
 
-    /**
-     * @return int
-     */
     public function getLowerCase(): int
     {
         return $this->lowerCase;
     }
 
-    /**
-     * @param int $lowerCase
-     * @return PasswordPolicy
-     */
-    public function setLowerCase(int $lowerCase): PasswordPolicy
+    public function setLowerCase(int $lowerCase): self
     {
         $this->lowerCase = $lowerCase;
 
         return $this;
     }
 
-    /**
-     * @return int
-     */
     public function getSpecialChars(): int
     {
         return $this->specialChars;
     }
 
-    /**
-     * @param int $specialChars
-     * @return PasswordPolicy
-     */
-    public function setSpecialChars(int $specialChars): PasswordPolicy
+    public function setSpecialChars(int $specialChars): self
     {
         $this->specialChars = $specialChars;
 
         return $this;
     }
 
-    /**
-     * @return int
-     */
     public function getDigits(): int
     {
         return $this->digits;
     }
 
-    /**
-     * @param int $digits
-     * @return PasswordPolicy
-     */
-    public function setDigits(int $digits): PasswordPolicy
+    public function setDigits(int $digits): self
     {
         $this->digits = $digits;
 

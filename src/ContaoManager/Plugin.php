@@ -15,12 +15,9 @@ use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
 use EikonaMedia\Contao\PasswordPolicy\EikonaMediaContaoPasswordPolicyBundle;
-use Symfony\Component\Config\Loader\LoaderResolverInterface;
-use Symfony\Component\HttpKernel\KernelInterface;
 
 /**
- * Class Plugin
- * @package EikonaMedia\Contao\PasswordPolicy\ContaoManager
+ * Class Plugin.
  */
 class Plugin implements BundlePluginInterface
 {
@@ -33,13 +30,5 @@ class Plugin implements BundlePluginInterface
             BundleConfig::create(EikonaMediaContaoPasswordPolicyBundle::class)
                 ->setLoadAfter([ContaoCoreBundle::class]),
         ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getRouteCollection(LoaderResolverInterface $resolver, KernelInterface $kernel)
-    {
-        //
     }
 }

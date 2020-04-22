@@ -14,8 +14,7 @@ use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 /**
- * Class Configuration
- * @package EikonaMedia\Contao\PasswordPolicy\DependencyInjection
+ * Class Configuration.
  */
 class Configuration implements ConfigurationInterface
 {
