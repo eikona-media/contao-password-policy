@@ -11,6 +11,7 @@
 namespace EikonaMedia\Contao\PasswordPolicy\Service;
 
 use Contao\Config;
+use Contao\DataContainer;
 use Contao\Input;
 use Contao\System;
 
@@ -95,32 +96,42 @@ class PasswordPolicyService
     }
 
     /**
-     * @return bool
+     * @param string $value
+     * @param DataContainer $dc
+     *
+     * @return string
      * @throws \Exception
      */
-    public function validateMemberPassword(): bool
+    public function validateMemberPassword(string $value, DataContainer $dc): string
     {
         if ((int)Config::get(PasswordPolicySetting::ACTIVE_SCOPE_MEMBER) !== 1) {
-            return true;
+            return $value;
         }
 
         $pw = Input::post('password');
 
-        return $this->validate($pw);
+        $this->validate($pw);
+
+        return $value;
     }
 
     /**
-     * @return bool
+     * @param string $value
+     * @param DataContainer $dc
+     *
+     * @return string
      * @throws \Exception
      */
-    public function validateUserPassword(): bool
+    public function validateUserPassword(string $value, DataContainer $dc): string
     {
         if ((int)Config::get(PasswordPolicySetting::ACTIVE_SCOPE_USER) !== 1) {
-            return true;
+            return $value;
         }
 
         $pw = Input::post('password');
 
-        return $this->validate($pw);
+        $this->validate($pw);
+
+        return $value;
     }
 }
