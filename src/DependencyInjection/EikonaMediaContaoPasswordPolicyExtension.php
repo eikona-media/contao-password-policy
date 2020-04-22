@@ -16,8 +16,7 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\ConfigurableExtension;
 
 /**
- * Class EikonaMediaContaoPasswordPolicyExtension
- * @package EikonaMedia\Contao\PasswordPolicy\DependencyInjection
+ * Class EikonaMediaContaoPasswordPolicyExtension.
  */
 class EikonaMediaContaoPasswordPolicyExtension extends ConfigurableExtension
 {

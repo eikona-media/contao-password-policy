@@ -13,10 +13,8 @@ namespace EikonaMedia\Contao\PasswordPolicy;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
- * Class EikonaMediaContaoPasswordPolicyBundle
- * @package EikonaMedia\Contao\PasswordPolicy
+ * Class EikonaMediaContaoPasswordPolicyBundle.
  */
 class EikonaMediaContaoPasswordPolicyBundle extends Bundle
 {
-    //
 }

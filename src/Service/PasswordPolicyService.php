@@ -11,19 +11,47 @@
 namespace EikonaMedia\Contao\PasswordPolicy\Service;
 
 use Contao\Config;
+use Contao\DataContainer;
 use Contao\Input;
 use Contao\System;
 
 /**
- * Class PasswordPolicyService
- * @package EikonaMedia\Contao\PasswordPolicy\Service
+ * Class PasswordPolicyService.
  */
 class PasswordPolicyService
 {
     /**
-     * @param PasswordPolicy $passwordPolicy
-     * @return string
+     * @throws \Exception
      */
+    public function validateMemberPassword(string $value, DataContainer $dc): string
+    {
+        if (1 !== (int) Config::get(PasswordPolicySetting::ACTIVE_SCOPE_MEMBER)) {
+            return $value;
+        }
+
+        $pw = Input::post('password');
+
+        $this->validate($pw);
+
+        return $value;
+    }
+
+    /**
+     * @throws \Exception
+     */
+    public function validateUserPassword(string $value, DataContainer $dc): string
+    {
+        if (1 !== (int) Config::get(PasswordPolicySetting::ACTIVE_SCOPE_USER)) {
+            return $value;
+        }
+
+        $pw = Input::post('password');
+
+        $this->validate($pw);
+
+        return $value;
+    }
+
     private function buildPolicyMessage(PasswordPolicy $passwordPolicy): string
     {
         System::loadLanguageFile('eimed_messages');
@@ -57,12 +85,10 @@ class PasswordPolicyService
             $policyParts[] = vsprintf($digitsMessage, [$passwordPolicy->getDigits()]);
         }
 
-        return $message . ' ' . implode(', ', $policyParts);
+        return $message.' '.implode(', ', $policyParts);
     }
 
     /**
-     * @param string $password
-     * @return bool
      * @throws \Exception
      */
     private function validate(string $password): bool
@@ -77,12 +103,12 @@ class PasswordPolicyService
         // build password policy from settings
         $passwordPolicy = new PasswordPolicy();
         $passwordPolicy
-            ->setMinLength((int)$minLength)
-            ->setMaxLength((int)$maxLength)
-            ->setUpperCase((int)$upperCase)
-            ->setLowerCase((int)$lowerCase)
-            ->setSpecialChars((int)$specialChars)
-            ->setDigits((int)$digits)
+            ->setMinLength((int) $minLength)
+            ->setMaxLength((int) $maxLength)
+            ->setUpperCase((int) $upperCase)
+            ->setLowerCase((int) $lowerCase)
+            ->setSpecialChars((int) $specialChars)
+            ->setDigits((int) $digits)
         ;
 
         $passwordValidator = new PasswordPolicyValidator($passwordPolicy);
@@ -92,35 +118,5 @@ class PasswordPolicyService
         }
 
         return true;
-    }
-
-    /**
-     * @return bool
-     * @throws \Exception
-     */
-    public function validateMemberPassword(): bool
-    {
-        if ((int)Config::get(PasswordPolicySetting::ACTIVE_SCOPE_MEMBER) !== 1) {
-            return true;
-        }
-
-        $pw = Input::post('password');
-
-        return $this->validate($pw);
-    }
-
-    /**
-     * @return bool
-     * @throws \Exception
-     */
-    public function validateUserPassword(): bool
-    {
-        if ((int)Config::get(PasswordPolicySetting::ACTIVE_SCOPE_USER) !== 1) {
-            return true;
-        }
-
-        $pw = Input::post('password');
-
-        return $this->validate($pw);
     }
 }
